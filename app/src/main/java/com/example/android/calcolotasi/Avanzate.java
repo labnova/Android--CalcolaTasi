@@ -3,6 +3,7 @@ package com.example.android.calcolotasi;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,35 +13,31 @@ import android.widget.CheckBox;
 
 public class Avanzate extends Activity implements View.OnClickListener {
 
-    CheckBox inagibilità;
+    CheckBox checkIna;
     CheckBox valoreStorico;
+    private Boolean attivataIna=false;
+    private Boolean attivatoValoreStorico=false;
     Button ritorna;
-    boolean ina= false;
-    boolean valStor= false;
+    Boolean ina= false;
+    Boolean valStor= false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_avanzate);
 
-        inagibilità = (CheckBox) findViewById(R.id.inagibilità);
+        checkIna = (CheckBox) findViewById(R.id.ina);
 
 
-        if (inagibilità.isChecked()==true) {
-            ina= true;
-        }
-//        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-//        inagibilità.setChecked(sharedPref.getBoolean("checked", false));
 
 
         valoreStorico = (CheckBox) findViewById(R.id.valoreStorico);
 
+        checkIna.setChecked(attivataIna);
+        valoreStorico.setChecked(attivatoValoreStorico);
 
-        if(valoreStorico.isChecked() == true) {
-            valStor = true;
-        }
-       /* sharedPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        valoreStorico.setChecked(sharedPref.getBoolean("checked", false));*/
+
+
 
         ritorna = (Button) findViewById(R.id.ritorna);
 
@@ -70,14 +67,54 @@ public class Avanzate extends Activity implements View.OnClickListener {
         return super.onOptionsItemSelected(item);
     }
 
+   /* @Override
+    protected void onResume() {
+        super.onResume();
+        checkIna.setChecked(attivataIna);
+        valoreStorico.setChecked(attivatoValoreStorico);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putBoolean("checkIna", checkIna.isChecked());
+        savedInstanceState.putBoolean("valoreStorico", valoreStorico.isChecked());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        attivataIna = savedInstanceState.getBoolean("checkIna");
+        attivatoValoreStorico = savedInstanceState.getBoolean("valoreStorico");
+    }*/
+
+
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.ritorna:
 
-                    Intent intent= new Intent();
-                    intent.putExtra("inagibilità", ina);
-                    intent.putExtra("valoreStorico", valStor);
+                Intent intent= new Intent();
+
+
+                if (checkIna.isChecked()) {
+                    ina = true;
+                    Log.d("ina_avanzate", ina.toString());
+
+
+                }
+
+                if(valoreStorico.isChecked()) {
+                    valStor = true;
+                }
+                    intent.putExtra("inag", ina);
+                    intent.putExtra("valStor", valStor);
+
+
+
+                    //intent.putExtra("valoreStorico", valoreStorico.isChecked());
                     setResult(RESULT_OK, intent);
                     finish();
             break;

@@ -212,6 +212,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     private void altriDati() {
         Intent intent = new Intent(this, Avanzate.class);
+        Boolean checked = false;
         startActivityForResult(intent, AVANZATE_CODE);
     }
 
@@ -233,9 +234,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             baseImponibile = rivalutazioneCatastale(renditaC) * 160;
             renditaC = baseImponibile;
 
-            if (inagibilità == "si") {
-                baseImponibile = baseImponibile / 2;
-            }
+
 
 
             if (poss != 100) {
@@ -291,14 +290,34 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         }
 
         if(requestCode == AVANZATE_CODE && resultCode == RESULT_OK) {
-            Intent intent = getIntent();
-            String ina= intent.getStringExtra("ina");
-            Log.d("ina", ina);
-            String valStor = intent.getStringExtra("valoreStorico");
 
-            if(ina == "true") {
-                inagibilità = "si";
+            renditaC = Double.parseDouble(String.valueOf(renditaCatastale.getText().toString()));
+
+            Boolean inag = data.getBooleanExtra("inag", false);
+            Boolean valStor = data.getBooleanExtra("valStor", false);
+
+           Log.d("inaG", inag.toString());
+            //Boolean valStor = intent.getBooleanExtra("valoreStorico", false);
+
+            if (inag.toString() == "true") {
+
+                renditaC = renditaC / 2;
+                renditaCatastale.setText(String.valueOf(renditaC));
             }
+
+            if(valStor.toString() == "true") {
+
+                renditaC = renditaC / 2;
+                renditaCatastale.setText(String.valueOf(renditaC));
+            }
+
+           /* String ina= intent.getStringExtra("ina");
+            Log.d("ina", ina);*/
+            //String valStor = intent.getStringExtra("valoreStorico");
+
+           /* if(ina == "true") {
+                inagibilità = "si";
+            }*/
         }
     }
 

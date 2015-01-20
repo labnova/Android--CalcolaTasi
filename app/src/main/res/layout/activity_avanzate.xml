@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="inagibilità"
-        android:id="@+id/inagibilità"
+        android:id="@+id/ina"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/textView2"
         android:layout_toEndOf="@+id/textView2"
@@ -27,7 +27,7 @@
         android:text="valore storico"
         android:id="@+id/valoreStorico"
         android:checked="false"
-        android:layout_below="@+id/inagibilità"
+        android:layout_below="@+id/ina"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:text="ritorna"
         android:id="@+id/ritorna"
-        android:layout_below="@+id/inagibilità"
+        android:layout_below="@+id/ina"
         android:layout_toRightOf="@+id/textView2"
         android:layout_toEndOf="@+id/textView2"
         android:layout_marginLeft="41dp"

@@ -16,6 +16,8 @@ import android.widget.Toast;
 
 public class risultati extends ActionBarActivity implements View.OnClickListener {
 
+    private static final int AVANZATE_CODE = 101;
+
     LinearLayout risultatiLayout;
 
     Double renditaC;
