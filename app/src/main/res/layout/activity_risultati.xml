@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:id="@+id/risultatiLayout"
+    android:orientation="vertical"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.android.calcolotasi.risultati"
+    android:weightSum="1">
+
+    <TextView android:id="@+id/Text1" android:text="Rendita Catastale" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <TextView android:id="@+id/renditaC" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView android:id="@+id/Text2" android:text="aliquota TASI" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <TextView android:id="@+id/impostaLorda" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView android:id="@+id/Text3" android:text="rata di Acconto" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <TextView android:id="@+id/rataAcconto" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView android:id="@+id/Text4" android:text="rata di Saldo" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <TextView android:id="@+id/rataSaldo" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView android:id="@+id/possessoLabel" android:text="Quota di possesso" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <TextView android:id="@+id/possesso" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView  android:text="mesi" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <TextView android:id="@+id/mesi" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voce F24"
+        android:id="@+id/f24"
+        android:layout_gravity="right" />
+
+    <ImageView
+        android:layout_width="333dp"
+        android:layout_height="230dp"
+        android:id="@+id/copertina"
+        />
+
+</LinearLayout>

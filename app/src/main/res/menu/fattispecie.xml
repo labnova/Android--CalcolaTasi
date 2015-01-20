@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:title="Abitazione principale" />
+    <item android:title="Abitazione di pregio"/>
+   <!-- <item android:title="Uffici e studi privati"/>
+    <item android:title="Gruppo B, tutte le categorie (da B/1 a B/8)"/>
+    <item android:title="Cantine, Soffitte, Magazzini, Locali di deposito "/>
+    <item android:title="Laboratorio per arti e mestieri"/>
+    <item android:title="Locali per esercizi sportivi senza fine di lucro"/>
+    <item android:title="stabilimenti balneari e termali senza fine di lucro"/>
+    <item android:title="garage, rimesse, stalle, scuderie senza fine di lucro"/>
+    <item android:title="tettorie chiuse o aperte"/>
+    <item android:title="Gruppo D (tranne D/5 e D/10)"/>
+    <item android:title="istituti di credito e assicurazioni"/>
+    <item android:title="fabbricati rurali strumentali all'agricoltura"/>
+    <item android:title="fabbricati rurali non strumentali"/>
+    <item android:title="Aree fabbricabili"/> -->
+</menu>

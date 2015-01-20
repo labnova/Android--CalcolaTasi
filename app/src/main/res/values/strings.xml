@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CalcoloTasi</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Impostazioni</string>
+    <string name="opzioniAvanzate">Opzioni Avanzate</string>
+    <string name="title_activity_risultati">risultati</string>
+    <string name="INDIETRO">indietro</string>
+    <string name="title_activity_info">Info</string>
+    <string name="Informazioni">Informazioni</string>
+    <string name="title_activity_avanzate">Avanzate</string>
+    <string name="inagibilità" />
+    <string name="titolari_detrazione">Titolari Detrazione</string>
+
+</resources>

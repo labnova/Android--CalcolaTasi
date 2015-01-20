@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Aosta">Aosta</string>
+    <string name="Torino">Torino</string>
+    <string name="Milano">Milano</string>
+    <string name="Trento">Trento</string>
+    <string name="Venezia">Venezia</string>
+    <string name="Trieste">Trieste</string>
+    <string name="Genova">Genova</string>
+    <string name="Bologna">Bologna</string>
+    <string name="Firenze">Firenze</string>
+    <string name="Perugia">Perugia</string>
+    <string name="Ancona">Ancona</string>
+    <string name="Aquila">L\'Aquila</string>
+    <string name="Roma">Roma</string>
+    <string name="Campobasso">Campobasso</string>
+    <string name="Napoli">Napoli</string>
+    <string name="Potenza">Potenza</string>
+    <string name="Bari">Bari</string>
+    <string name="Catanzaro">Catanzaro</string>
+    <string name="Palermo">Palermo</string>
+    <string name="Cagliari">Cagliari</string>
+    <string name="Trapani">Trapani</string>
+</resources>
