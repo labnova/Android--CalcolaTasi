@@ -1,8 +1,8 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ScrollView01"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent">
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
@@ -20,23 +20,42 @@
         android:layout_height="wrap_content"
         android:text="Destinazione Immobile"
         android:id="@+id/textView"
-        android:textColor="#0000FF" />
+        android:layout_alignBaseline="@+id/renditaText"
+        android:layout_alignBottom="@+id/renditaText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Abitazione Singola"
         android:id="@+id/fattispecie"
-        android:layout_gravity="right" />
+        android:layout_gravity="right"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prima Casa:"
+        android:id="@+id/primaCasa"
+        tools:ignore="NewApi"
+        android:layout_alignBaseline="@+id/comuni"
+        android:layout_alignBottom="@+id/comuni"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Rendita Catastale"
         android:id="@+id/renditaText"
-        android:layout_gravity="left|top"
-        android:layout_weight="0.00" />
+        android:layout_gravity="right"
+        android:layout_weight="0.00"
+        android:layout_below="@+id/fattispecie"
+        />
 
     <EditText
         android:layout_width="162dp"
@@ -44,92 +63,150 @@
         android:id="@+id/renditaCatastale"
         android:inputType="number"
         android:autoText="true"
-        android:layout_gravity="right|top" />
+        android:layout_gravity="right|top"
+        android:layout_below="@+id/primaCasa"
+        android:layout_toLeftOf="@+id/mesiText"
+        android:layout_toStartOf="@+id/mesiText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Città"
+        android:id="@+id/cit"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp" />
 
     <AutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/comuni"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:layout_alignTop="@+id/numeroTitolariDetrazione"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/primaCasa"
+        android:layout_alignStart="@+id/primaCasa" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:text="Aliquota Tasi"
         android:id="@+id/aliquotaText"
-        android:layout_gravity="left|top"
         android:layout_weight="1.00"
-        android:background="@color/accent_material_dark" />
+        android:background="@color/accent_material_dark"
+        android:layout_alignBaseline="@+id/comuni"
+        android:layout_alignBottom="@+id/comuni"
+        android:layout_toLeftOf="@+id/aliquota"
+        android:layout_toStartOf="@+id/aliquota" />
+
 
     <EditText
         android:layout_width="162dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:id="@+id/aliquota"
         android:inputType="number"
         android:autoText="true"
-        android:layout_gravity="right|top" />
+        android:layout_gravity="center_horizontal"
+        android:layout_above="@+id/possesso"
+        android:layout_toRightOf="@+id/mesi"
+        android:layout_toEndOf="@+id/mesi"
+        android:layout_weight="0.54" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Quota Possesso"
         android:id="@+id/possessoLabel"
-        android:layout_gravity="left|top"
-        android:layout_weight="0.00" />
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/possessoText"
-        android:layout_gravity="left|top" />
+        android:layout_alignBottom="@+id/aliquota"
+        android:layout_alignRight="@+id/altriDati"
+        android:layout_alignEnd="@+id/altriDati"
+        android:layout_gravity="right" />
 
     <SeekBar
-        android:layout_width="match_parent"
+        android:layout_width="167dp"
         android:layout_height="wrap_content"
         android:progress="100"
-        android:id="@+id/possesso" />
+        android:id="@+id/possesso"
+        android:layout_alignTop="@+id/mesi"
+        android:layout_alignRight="@+id/mesiText"
+        android:layout_alignEnd="@+id/mesiText"
+        android:layout_marginTop="35dp"
+        android:layout_gravity="right" />
+
+    <TextView
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/possessoText"
+        android:layout_gravity="right"
+        android:layout_above="@+id/possesso"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="46dp" />
+
+    <TextView
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:text="Mesi"
+        android:id="@+id/mesiText"
+        android:layout_below="@+id/possessoText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mesi"
+        tools:ignore="NewApi"
+        android:layout_above="@+id/altriDati"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="157dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/numeroTitolariDetrazione"
+        android:layout_above="@+id/calcola"
+        android:layout_marginBottom="28dp"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toStartOf="@+id/possessoLabel"
+        android:layout_toLeftOf="@+id/possessoLabel"
+        android:layout_gravity="right" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="altri dati"
         android:id="@+id/altriDati"
-        android:layout_gravity="right" />
-
-    <Switch
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Prima Casa:"
-        android:id="@+id/primaCasa"
-        tools:ignore="NewApi" />
+        android:layout_alignBottom="@+id/numeroTitolariDetrazione"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="359dp"
         android:layout_height="wrap_content"
         android:text="Calcola"
         android:id="@+id/calcola"
         android:layout_gravity="bottom|right"
-        style="@style/blueMono"/>
+        style="@style/blueMono"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/mesiText"
+        android:layout_alignEnd="@+id/mesiText" />
 
-    <TextView
-        android:layout_width="72dp"
-        android:layout_height="wrap_content"
-        android:text="Mesi"
-        android:id="@+id/mesiText" />
 
-    <NumberPicker
-        android:layout_width="wrap_content"
+    <Button
+        android:layout_width="359dp"
         android:layout_height="wrap_content"
-        android:id="@+id/mesi"
-        tools:ignore="NewApi" />
-
-    <Spinner
-        android:layout_width="157dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/numeroTitolariDetrazione"
-        android:layout_gravity="right" />
+        android:text="Pref"
+        android:id="@+id/pref"
+        android:layout_gravity="bottom|right"
+        style="@style/blueMono"
+        />
 
 
 </LinearLayout>
 
-</ScrollView>
+    </ScrollView>

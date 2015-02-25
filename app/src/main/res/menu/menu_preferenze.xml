@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:CalcoloTasi="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.android.calcolotasi.preferenze">
+
+
+    <item
+        android:id="@+id/menu_all"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/menu_all"
+        />
+    <item
+        android:id="@+id/menu_cheap"
+        android:orderInCategory="100"
+        CalcoloTasi:showAsAction="ifRoom"
+        android:title="@string/menu_cheap"
+        tools:ignore="AppCompatResource" />
+    <item
+        android:id="@+id/menu_fancy"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/menu_fancy"
+        tools:ignore="AppCompatResource" />
+
+
+
+</menu>

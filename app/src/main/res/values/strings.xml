@@ -12,5 +12,12 @@
     <string name="title_activity_avanzate">Avanzate</string>
     <string name="inagibilità" />
     <string name="titolari_detrazione">Titolari Detrazione</string>
+    <string name="title_activity_preferenze">preferenze</string>
+    <!--<string name="label_username">Username</string>-->
+    <string name="btn_setprefs">Crea file</string>
+    <string name="btn_showprefs">Leggi file</string>
+    <string name="menu_all">ALL</string>
+    <string name="menu_cheap">CHEAP</string>
+    <string name="menu_fancy">FANCY</string>
 
 </resources>

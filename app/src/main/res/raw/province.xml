@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+    <province>
+        <provincia>
+            <provID>1</provID>
+            <provNome>Trapani</provNome>
+            <descrizione>E' una delle città siciliane</descrizione>
+            <prezzoBiglietto>17</prezzoBiglietto>
+            <immagine>map_Trapani</immagine>
+            <link>http://www.labnova.it</link>
+        </provincia>
+    <provincia>
+        <provID>2</provID>
+        <provNome>Pisa</provNome>
+        <descrizione>E' una delle città toscane</descrizione>
+        <prezzoBiglietto>27</prezzoBiglietto>
+        <immagine>map_Pisa</immagine>
+        <link>http://www.labnova.it</link>
+    </provincia>
+    <provincia>
+        <provID>3</provID>
+        <provNome>Bologna</provNome>
+        <descrizione>E' una delle città emiliane</descrizione>
+        <prezzoBiglietto>37</prezzoBiglietto>
+        <immagine>map_Bologna</immagine>
+        <link>http://www.labnova.it</link>
+    </provincia>
+    <provincia>
+        <provID>4</provID>
+        <provNome>Torino</provNome>
+        <descrizione>E' una delle città piemontesi</descrizione>
+        <prezzoBiglietto>47</prezzoBiglietto>
+        <immagine>map_Torino</immagine>
+        <link>http://www.labnova.it</link>
+    </provincia>
+    <provincia>
+        <provID>5</provID>
+        <provNome>Roma</provNome>
+        <descrizione>E' il capoluogo d'Italia</descrizione>
+        <prezzoBiglietto>57</prezzoBiglietto>
+        <immagine>map_Roma</immagine>
+        <link>http://www.labnova.it</link>
+    </provincia>
+</province>

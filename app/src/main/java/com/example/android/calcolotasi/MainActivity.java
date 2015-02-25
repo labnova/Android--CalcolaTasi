@@ -35,9 +35,11 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     LinearLayout main;
 
+
     Button calcola;
     Button fattispecie;
     Button altriDati;
+    Button pref;
 
 
     TextView aliquotaTasi;
@@ -48,10 +50,11 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     TextView possessoText;
     NumberPicker mesi;
     Switch primaCasa;
-
+    TextView primaCasaText;
 
     TextView titolariDetrazione;
     Spinner numeroTitolariDetrazione;
+
 
 
     Double renditaC = 1.00;
@@ -83,6 +86,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         main = (LinearLayout) findViewById(R.id.main);
 
+        pref = (Button) findViewById(R.id.pref);
+
+        pref.setOnClickListener(this);
+
         aliquotaTasi= (TextView) findViewById(R.id.aliquotaText);
         aliquota= (EditText) findViewById(R.id.aliquota);
         renditaCatastale= (EditText) findViewById(R.id.renditaCatastale);
@@ -91,13 +98,11 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         possessoText = (TextView) findViewById(R.id.possessoText);
         possessoText.setText("100");
 
-
-
-
         mesi = (NumberPicker) findViewById(R.id.mesi);
         mesi.setMaxValue(12);
         mesi.setMinValue(1);
         mesi.setValue(12);
+
 
         primaCasa = (Switch) findViewById(R.id.primaCasa);
         primaCasa.setChecked(true);
@@ -116,6 +121,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         titolariDetrazione = new TextView(this);
         titolariDetrazione.setText(R.string.titolari_detrazione);
         main.addView(titolariDetrazione);
+
         titolariDetrazione.setVisibility(View.GONE);
 
         numeroTitolariDetrazione = (Spinner) findViewById(R.id.numeroTitolariDetrazione);
@@ -205,6 +211,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
             case R.id.altriDati:
                 altriDati();
+                break;
+            case R.id.pref:
+                preferenze();
+                break;
             default: break;
 
         }
@@ -214,6 +224,11 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         Intent intent = new Intent(this, Avanzate.class);
         Boolean checked = false;
         startActivityForResult(intent, AVANZATE_CODE);
+    }
+
+    private void preferenze() {
+        Intent intent = new Intent(this, preferenze.class);
+        startActivity(intent);
     }
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
@@ -451,6 +466,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         } else {
             titolariDetrazione.setVisibility(View.GONE);
+
         }
     }
 
